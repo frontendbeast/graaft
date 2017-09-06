@@ -1,0 +1,15 @@
+{
+    "apps" : [{
+        "name": "graaft.co",
+        "script": "/var/www/graaft.co/current/source/server.js",
+        "env": {
+            "NODE_ENV": "production"
+        }
+    },{
+        "name": "staging.graaft.co",
+        "script": "/var/www/graaft.co/subdomains/staging/current/source/server.js",
+        "env": {
+            "NODE_ENV": "development"
+        }
+    }]
+}

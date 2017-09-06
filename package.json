@@ -1,0 +1,43 @@
+{
+  "name": "graaft",
+  "version": "1.0.0",
+  "description": "Graaft website.",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "validate-commit-msg",
+    "start": "node ./source/server.js",
+    "test": "./node_modules/mocha/bin/mocha tests/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendbeast/graaft.co"
+  },
+  "author": {
+    "name": "Darren Hall",
+    "email": "darren@darrenhall.co",
+    "url": "https://darrenhall.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontendbeast/graaft.co/issues"
+  },
+  "homepage": "https://graaft.co",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "husky": "^0.11.7",
+    "mocha": "^3.0.2",
+    "run-sequence": "^1.2.2",
+    "validate-commit-msg": "^2.8.0",
+    "yargs": "^6.0.0",
+    "zombie": "^4.2.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
