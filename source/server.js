@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 });
 
 // Unless port is set by mocha, use 4000 for production or 3000 otherwise
-const PORT = process.env.PORT || (process.env.NODE_ENV == 'production') ? 4000 : 3000;
+const PORT = process.env.PORT || (process.env.NODE_ENV == 'production') ? 4001 : 3001;
 
 // Expose the app for mocha
 module.exports = app;
