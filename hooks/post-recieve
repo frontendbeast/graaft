@@ -10,7 +10,7 @@ unset GIT_DIR
 DATE=$(date +"%Y%m%d%H%M")
 
 # Where our repo lives
-REPO_PATH=/var/www/darrenhall.co/repo.git
+REPO_PATH=/var/www/graaft.co/repo.git
 
 # Cater for multiple similtaneous branch pushes
 while read oldrev newrev refname
