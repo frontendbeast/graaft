@@ -5,7 +5,7 @@ function getTaskConfig(config) {
 	var path = require('path');
 
 	var taskConfig = {
-		items: [path.join(config.paths.src.root, 'favicon.ico')]
+		items: [path.join(config.paths.src.root, 'favicon.ico'), path.join(config.paths.src.images, '**/*.*')]
 	};
 
 	return taskConfig;
