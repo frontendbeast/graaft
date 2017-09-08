@@ -1,6 +1,7 @@
 .c-footer {
   color: get-color(footer-copy);
-  margin: get-size(gutter) 0;
+  margin-bottom: get-size(gutter);
+  margin-top: get-size(gutter);
 }
 
 .c-footer__item {
