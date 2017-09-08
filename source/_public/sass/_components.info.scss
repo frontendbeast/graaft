@@ -1,0 +1,45 @@
+.c-info {
+  background-color: get-color(info-bg);
+  margin: get-size(gutter) 0;
+  padding: 0 get-size(gutter);
+}
+
+  .c-info__item {
+    font-weight: 800;
+    line-height: 0.75;
+    padding: get-size(gutter) 0;
+
+    & + & {
+      margin-left: get-size(gutter);
+    }
+
+    &:last-child {
+      margin-left: auto;
+      padding: 0;
+    }
+  }
+
+  .c-info__link {
+    background-color: get-color(body-bg);
+    color: get-color(info-link);
+    display: block;
+    padding: get-size(gutter);
+    text-decoration: none;
+    transition: color 0.25s, background-color 0.25s;
+
+    &:hover {
+      background-color: get-color(info-link);
+      color: get-color(body-bg);
+    }
+  }
+
+  .c-info__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .c-info__normal {
+    font-weight: 300;
+  }

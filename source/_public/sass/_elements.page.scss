@@ -1,8 +1,55 @@
+a:not([class]) {
+  color: inherit;
+  border-bottom: 1px solid get-color(link-highlight);
+  text-decoration: none;
+  transition: color 0.25s;
+
+  &:hover {
+    color: get-color(link-highlight);
+  }
+}
+
 body {
   height: 100%;
 	margin: 0;
 }
 
 html {
+  font-family: Open Sans, sans-serif;
+  font-size: 1.125rem;
   height: 100%;
+	line-height: 1.5;
+}
+
+h2 {
+  color: get-color(headings);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 0.75;
+  margin: 0 0 get-size(gutter) 0;
+  text-transform: uppercase;
+
+  p + & {
+    margin-top: get-size(gutter) * 2;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 (get-size(gutter) * 0.75) 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+sup {
+  font-size: 0.555555rem;
+  vertical-align: top;
 }

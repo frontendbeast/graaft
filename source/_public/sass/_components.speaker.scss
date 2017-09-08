@@ -1,0 +1,8 @@
+.c-speaker {
+  background-color: get-color(speaker-bg);
+}
+
+  .c-speaker__name {
+    color: get-color(speaker-name);
+    margin-bottom: 5px;
+  }

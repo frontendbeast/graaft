@@ -1,0 +1,33 @@
+.c-footer {
+  color: get-color(footer-copy);
+  margin: get-size(gutter) 0;
+}
+
+.c-footer__item {
+  & + & {
+    margin-left: get-size(gutter) / 3;
+
+    &:before {
+      content: '|';
+      margin-right: get-size(gutter) / 3;
+    }
+  }
+}
+
+.c-footer__link {
+  color: inherit;
+  border-bottom: 1px solid get-color(footer-copy);
+  text-decoration: none;
+  transition: color 0.25s;
+
+  &:hover {
+    border-bottom-color: get-color(link-highlight);
+    color: get-color(link-highlight);
+  }
+}
+
+.c-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

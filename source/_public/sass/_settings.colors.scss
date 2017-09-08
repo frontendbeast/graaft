@@ -1,0 +1,42 @@
+// sass-lint:disable no-color-keywords indentation
+
+$c-palette: (
+	primary: (
+    black: #222,
+    cyan: #6ff,
+    grey: #999,
+    grey-dark: #666,
+    grey-light: #eee,
+    pink: #f06,
+    purple: #90c,
+    white: #fff,
+	)
+);
+
+$c-tints: (
+  primary: ()
+);
+
+$c-uses: (
+	body-bg:                get-color-direct(primary, white),
+  body-copy:              get-color-direct(primary, black),
+
+  footer-copy:            get-color-direct(primary, grey-dark),
+
+  headings:               get-color-direct(primary, pink),
+
+  info-bg:                get-color-direct(primary, cyan),
+  info-link:              get-color-direct(primary, pink),
+
+  link-highlight:         get-color-direct(primary, purple),
+
+  masthead-bg:            get-color-direct(primary, black),
+  masthead-bg-stripe:     mix(get-color-direct(primary, white), get-color-direct(primary, black), 3%),
+  masthead-copy:          get-color-direct(primary, grey-light),
+  masthead-event:         get-color-direct(primary, pink),
+  masthead-presents:      get-color-direct(primary, grey),
+  masthead-speaker:       get-color-direct(primary, purple),
+
+  speaker-bg:             get-color-direct(primary, grey-light),
+  speaker-name:           get-color-direct(primary, purple),
+);

@@ -1,0 +1,37 @@
+.c-masthead {
+  background-color: get-color(masthead-bg);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent get-size(masthead-stripe), get-color(masthead-bg-stripe) get-size(masthead-stripe), get-color(masthead-bg-stripe) get-size(masthead-stripe) * 2);
+  color: get-color(masthead-copy);
+  margin: get-size(gutter) 0;
+  padding: get-size(gutter);
+}
+
+  .c-masthead__event {
+    color: get-color(masthead-event);
+    font-size: 4.444444rem;
+    margin-left: -0.15rem;
+  }
+
+  .c-masthead__heading {
+    color: get-color(masthead-speaker);
+    font-size: 2.222222rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .c-masthead__intro {
+    font-style: italic;
+    margin: 0;
+  }
+
+  .c-masthead__logo {
+    margin-right: 5px;
+    width: 100px;
+  }
+
+  .c-masthead__presents {
+    color: get-color(masthead-presents);
+    font-size: 0.777777rem;
+  }
+
+
