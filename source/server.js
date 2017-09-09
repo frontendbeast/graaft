@@ -27,7 +27,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Home page routing
 app.get('/', function(req, res) {
-    res.render('home');
+  res.render('home');
+});
+
+// Code of conduct page routing
+app.get('/code-of-conduct', function(req, res) {
+  res.render('code-of-conduct');
+});
+
+// Terms page routing
+app.get('/terms', function(req, res) {
+  res.render('terms');
 });
 
 // Unless port is set by mocha, use 4000 for production or 3000 otherwise

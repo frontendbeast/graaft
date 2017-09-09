@@ -1,3 +1,7 @@
 .u-margin-bottom-none {
   margin-bottom: 0;
 }
+
+.u-margin-bottom-double {
+  margin-bottom: get-size(gutter) * 2;
+}
