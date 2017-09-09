@@ -1,7 +1,31 @@
 .u-padding {
-  padding: get-size(gutter);
+  padding: get-size(gutter) / 2;
+
+  @include respond-min(extra-padding) {
+    padding: get-size(gutter);
+  }
 }
 
 .u-padding-horizontal {
-  padding: 0 get-size(gutter);
+  padding: 0 (get-size(gutter) / 2);
+
+  @include respond-min(extra-padding) {
+    padding: 0 get-size(gutter);
+  }
+}
+
+.u-padding-vertical {
+  @include breakpoints(info-horizontal) {
+    padding: (get-size(gutter) / 2) 0;
+
+    @include respond-min(extra-padding) {
+      padding: get-size(gutter) 0;
+    }
+  }
+}
+
+.u-padding-none {
+  @include breakpoints(info-horizontal) {
+    padding: 0;
+  }
 }

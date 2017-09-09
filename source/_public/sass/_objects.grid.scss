@@ -1,14 +1,22 @@
 .o-grid {
   display: grid;
   grid-column-gap: get-size(gutter);
-  grid-template-columns: calc(33.333333% - #{get-size(gutter) / 2}) calc(66.666666% - #{get-size(gutter) / 2});
+  grid-template-columns: 1fr;
+
+  @include respond-min(two-column) {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .o-grid__primary {
-  grid-column-start: 2;
+  @include respond-min(two-column) {
+    grid-column-start: 2;
+  }
 }
 
 .o-grid__secondary {
-  grid-column-start: 1;
-  grid-row-start: 1;
+  @include respond-min(two-column) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
 }

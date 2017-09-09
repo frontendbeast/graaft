@@ -1,31 +1,55 @@
 .c-info {
   background-color: get-color(info-bg);
   margin: get-size(gutter) 0;
-  padding: 0 get-size(gutter);
 }
 
   .c-info__item {
     font-weight: 800;
-    line-height: 0.75;
-    padding: get-size(gutter) 0;
+    line-height: 1.2;
 
-    & + & {
-      margin-left: get-size(gutter);
+    @include respond-min(info-horizontal) {
+      & + & {
+        margin-left: get-size(gutter) / 2;
+      }
+
+      &:first-child {
+        flex-basis: 65%;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
     }
 
-    &:last-child {
-      margin-left: auto;
-      padding: 0;
+    @include respond-min(info-single-line) {
+      &:first-child {
+        flex-basis: auto;
+      }
+    }
+
+    @include respond-min(extra-padding) {
+      & + & {
+        margin-left: get-size(gutter);
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
     }
   }
 
   .c-info__link {
     background-color: get-color(body-bg);
     color: get-color(info-link);
-    display: block;
-    padding: get-size(gutter);
+    display: inline-block;
+    margin-left: -#{get-size(gutter) / 2};
     text-decoration: none;
     transition: color 0.25s, background-color 0.25s;
+
+    @include respond-min(info-horizontal) {
+      display: block;
+      margin-left: 0;
+    }
 
     &:hover {
       background-color: get-color(info-link);
@@ -35,11 +59,33 @@
 
   .c-info__list {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin-left: 0;
+    padding-left: 0;
     text-transform: uppercase;
   }
 
+  .c-info__location {
+    display: inline-block;
+    font-weight: 300;
+
+    @include respond-min(450px) {
+      padding-left: get-size(gutter) / 2;
+    }
+
+    @include respond-min(info-horizontal) {
+      display: block;
+      padding-left: 0;
+    }
+
+    @include respond-min(info-single-line) {
+      display: inline-block;
+      padding-left: get-size(gutter) * 0.333333;
+    }
+
+    @include respond-min(extra-padding) {
+      padding-left: get-size(gutter) * 0.85;
+    }
+  }
   .c-info__normal {
     font-weight: 300;
   }

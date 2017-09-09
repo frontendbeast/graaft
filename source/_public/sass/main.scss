@@ -1,6 +1,8 @@
+@import 'tools.breakpoints';
 @import 'tools.colors';
 @import 'tools.functions';
 
+@import 'settings.breakpoints';
 @import 'settings.colors';
 @import 'settings.dimensions';
 
@@ -12,9 +14,9 @@
 
 @import 'components.footer';
 @import 'components.info';
-@import 'components.logo';
 @import 'components.masthead';
 @import 'components.speaker';
+@import 'components.tick-list';
 
 @import 'utilities.margin';
 @import 'utilities.padding';

@@ -1,6 +1,40 @@
 .c-speaker {
   background-color: get-color(speaker-bg);
+  margin-top: get-size(gutter);
+
+  @include respond-min(extra-padding) {
+    margin-top: get-size(gutter) * 2;
+  }
+
+  @include respond-min(two-column) {
+    margin-top: 0;
+  }
 }
+
+  .c-speaker__img {
+    margin: -#{get-size(gutter) / 2};
+    margin-bottom: get-size(gutter) / 2;
+    max-width: calc(100% + #{get-size(gutter)});
+    width: calc(100% + #{get-size(gutter)});
+
+    @include respond-min(speaker-horizontal) {
+      margin: 0 (get-size(gutter) / 2) (get-size(gutter) / 2) 0;
+      float: left;
+      width: 33.333333%;
+    }
+
+    @include respond-min(extra-padding) {
+      margin: 0 get-size(gutter) get-size(gutter) 0;
+    }
+
+    @include respond-min(two-column) {
+      float: none;
+      margin: -#{get-size(gutter)};
+      margin-bottom: get-size(gutter);
+      max-width: calc(100% + #{get-size(gutter) * 2});
+      width: calc(100% + #{get-size(gutter) * 2});
+    }
+  }
 
   .c-speaker__name {
     color: get-color(speaker-name);

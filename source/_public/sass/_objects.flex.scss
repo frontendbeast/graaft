@@ -1,5 +1,7 @@
 .o-flex {
-  display: flex;
+  @include breakpoints(info-horizontal) {
+    display: flex;
+  }
 }
 
 .o-flex--center {

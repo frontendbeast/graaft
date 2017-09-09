@@ -1,0 +1,21 @@
+.c-tick-list {
+  list-style: none;
+  padding-left: get-size(gutter);
+}
+
+  .c-tick-list__item {
+    position: relative;
+    margin-bottom: 10px;
+
+    &:before {
+      background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24.29"%3E%3Cpath fill="#f06" d="M25.49 0L10.21 15.28 4.5 9.57 0 14.08l10.21 10.21 1.32-1.31L30 4.5 25.49 0"/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: ' ';
+      height: 1rem;
+      position: absolute;
+      left: -#{get-size(gutter) * 0.9};
+      top: 0.45rem;
+      width: 1rem;
+    }
+  }
