@@ -6,6 +6,14 @@
   }
 }
 
+.u-padding-bottom {
+  padding-bottom: (get-size(gutter) / 2);
+
+  @include respond-min(extra-padding) {
+    padding-bottom: get-size(gutter);
+  }
+}
+
 .u-padding-horizontal {
   padding: 0 (get-size(gutter) / 2);
 
