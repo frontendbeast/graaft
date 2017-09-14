@@ -1,16 +1,22 @@
 .o-grid {
   display: grid;
-  grid-column-gap: get-size(gutter);
   grid-template-columns: 1fr;
 
   @include respond-min(two-column) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr get-size(gutter) 2fr;
+  }
+}
+
+.o-grid__gap {
+  @include respond-min(two-column) {
+    grid-column-start: 2;
   }
 }
 
 .o-grid__primary {
   @include respond-min(two-column) {
-    grid-column-start: 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
   }
 }
 

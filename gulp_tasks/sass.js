@@ -10,6 +10,8 @@ var livereload      = require('gulp-livereload');
 var path            = require('path');
 
 var sass            = require('gulp-sass');
+var autoprefixer    = require('autoprefixer');
+var postcss         = require('gulp-postcss');
 
 module.exports = function(gulp, config, tasks) {
 
@@ -18,8 +20,9 @@ module.exports = function(gulp, config, tasks) {
 	var dependencies = [];
 
 	gulp.task('sass', dependencies, function () {
-		return gulp.src([path.join(config.paths.src.sass, '/**/*.scss')])
+  	return gulp.src([path.join(config.paths.src.sass, '/**/*.scss')])
 			.pipe(sass({errLogToConsole: true, outputStyle: 'expanded'}).on('error', sass.logError))
+			.pipe(postcss([autoprefixer({browsers: ['last 2 versions'], grid: true})]))
 			.pipe(gulp.dest(config.paths.dest.css))
 			.pipe(gulpif(config.isWatched, livereload()));
 	});

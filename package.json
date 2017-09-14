@@ -23,11 +23,13 @@
   },
   "homepage": "https://graaft.co",
   "devDependencies": {
+    "autoprefixer": "^7.1.4",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.1",
     "gulp-inline-source": "^3.0.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.0",
     "gulp-sass": "^2.3.2",
     "husky": "^0.11.7",
     "mocha": "^3.0.2",

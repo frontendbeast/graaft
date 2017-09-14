@@ -33,10 +33,12 @@
   }
 
   .c-masthead__logo {
+    height: 29.155px;
     margin-right: 5px;
     width: 85px;
 
     @include respond-min(larger-font) {
+      height: 34.3px;
       width: 100px;
     }
   }
