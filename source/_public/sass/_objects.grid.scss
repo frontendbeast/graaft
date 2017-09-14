@@ -1,8 +1,6 @@
 .o-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-
   @include respond-min(two-column) {
+    display: grid;
     grid-template-columns: 1fr get-size(gutter) 2fr;
   }
 }
