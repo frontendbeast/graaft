@@ -8,8 +8,12 @@ const path = require('path');
 
 const app = require(path.join('..', '..', 'source', 'server'));
 const Browser = require('zombie');
+const nock = require('nock');
 
 Browser.localhost('darrenhall.co', process.env.PORT);
+
+const webfont = nock('https://ajax.googleapis.com').get('/ajax/libs/webfont/1.6.26/webfont.js').replyWithFile(200, __dirname + '/../mocks/webfont.js');
+const analytics = nock('https://www.google-analytics.com').get('/analytics.js').reply(200);
 
 describe('When a user visits the home page', function () {
 

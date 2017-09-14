@@ -1,0 +1,3 @@
+window.WebFont = {
+  load: function() {}
+};

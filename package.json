@@ -6,7 +6,7 @@
   "scripts": {
     "commitmsg": "validate-commit-msg",
     "start": "node ./source/server.js",
-    "test": "./node_modules/mocha/bin/mocha tests/**/*"
+    "test": "./node_modules/mocha/bin/mocha \"tests/{acceptance, unit}/*\""
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "gulp-sass": "^2.3.2",
     "husky": "^0.11.7",
     "mocha": "^3.0.2",
+    "nock": "^9.0.14",
     "run-sequence": "^1.2.2",
     "validate-commit-msg": "^2.8.0",
     "yargs": "^6.0.0",
